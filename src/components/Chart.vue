@@ -43,16 +43,10 @@ export default {
           display: false,
         },
         layout: {
-          padding: 16,
+          padding: 20,
         },
         plugins: {
-          labels: {
-            render: 'label',
-            fontSize: 16,
-            fontStyle: 'bold',
-            position: 'border',
-            fontColor: '#fff',
-          },
+          labels: false,
         },
         scale: {
           ticks: this.scale,

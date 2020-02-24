@@ -1,6 +1,7 @@
 <template>
   <section class="step">
-    <h2 class="step__title">{{ title }}</h2>
+    <h2 class="step__title">{{ step + 1 }} - {{ title }}</h2>
+    <p>{{ desc }}</p>
     <slot></slot>
 
     <ul class="step__values">
@@ -20,11 +21,11 @@
       </template>
     </ul>
 
-    <button
+    <!-- button
       class="step__skip-btn"
       @click="skip">
       Skip →
-    </button>
+    </button -->
   </section>
 </template>
 
@@ -35,6 +36,14 @@ export default {
   props: {
     title: {
       type: String,
+      required: true,
+    },
+    desc: {
+      type: String,
+      required: true,
+    },
+    step: {
+      type: Number,
       required: true,
     },
     value: Number,
@@ -77,9 +86,11 @@ export default {
     &__rate-btn {
       font-size: 2rem;
       cursor: pointer;
+      background-color: white;
 
       &--active {
-        background-color: gold;
+        background-color: #5100FF;
+        color: white;
       }
     }
   }

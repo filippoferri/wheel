@@ -3,7 +3,7 @@
     <Header />
 
     <main class="content">
-      <div v-if="loading" class="loading">Loading...</div>
+      <div v-if="loading" class="loading">In caricamento...</div>
 
       <transition
         v-else
@@ -12,6 +12,7 @@
         <router-view
           :wheel-data="wheelData"
           :steps="steps"
+          :descriptions="descriptions"
           :chart-data="chartData"
           :scale="scale"
         />
@@ -19,9 +20,7 @@
     </main>
 
     <footer>
-      Released under MIT license.
-      Made with ♡ by
-      <a href="https://github.com/theshem" target="_blank" rel="noreferrer noopener">@theshem</a>.
+      <a href="https://fluency.cx" target="_blank" rel="noreferrer noopener">°Fluency</a>.
     </footer>
   </div>
 </template>
@@ -40,6 +39,7 @@ export default {
   data() {
     return {
       steps: [],
+      descriptions: [],
       wheelData: {},
       scale: {},
       loading: true,
@@ -55,8 +55,9 @@ export default {
 
   created() {
     fetchWheelData()
-      .then(({ steps, scale }) => {
+      .then(({ steps, descriptions, scale }) => {
         this.steps = steps;
+        this.descriptions = descriptions;
         this.scale = scale;
         this.resetWheelData(steps);
       })
@@ -92,6 +93,7 @@ export default {
 
 <style lang="scss">
   @import "~normalize.css";
+  @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 
   html {
     height: 100%;
@@ -101,7 +103,7 @@ export default {
     min-height: 100%;
     display: flex;
 
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
@@ -130,7 +132,7 @@ export default {
       font-weight: bold;
       color: #2c3e50;
       &.router-link-exact-active {
-        color: #42b983;
+        color: #5100FF;
       }
     }
   }
@@ -149,7 +151,7 @@ export default {
   }
 
   a {
-    color: #42b983;
+    color: #5100FF;
   }
 
   a[target="_blank"]::after {

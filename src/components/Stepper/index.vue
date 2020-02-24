@@ -2,10 +2,12 @@
   <Step
     class="step"
     :title="steps[currentStep]"
+    :desc="descriptions[currentStep]"
+    :step="currentStep"
     :value="currentStepValue"
     :scale-max="scaleMax"
     @set-value="next">
-    <p>How would you rate this area of your life?</p>
+    <p>Come giudichi quest'aspetto del tuo business?</p>
   </Step>
 </template>
 
@@ -28,6 +30,11 @@ export default {
 
   props: {
     steps: {
+      type: Array,
+      required: true,
+    },
+
+    descriptions: {
       type: Array,
       required: true,
     },

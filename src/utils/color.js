@@ -2,7 +2,7 @@
 export function color(count) {
   const colors = [
     '#F44336',
-    '#E91E63',
+    '#FF3366',
     '#9C27B0',
     '#673AB7',
     '#3F51B5',

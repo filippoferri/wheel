@@ -1,26 +1,24 @@
 <template>
   <article class="assessment">
-    <h1>The Wheel of Life Assessment</h1>
-    <p>The assessment can usually be filled out in less than a minute.</p>
-
     <Stepper
       :wheel-data="wheelData"
       :steps="steps"
+      :descriptions="descriptions"
       :scale-max="scale.max"
       @show-result="showResult" />
 
     <hr>
 
-    <section class="preview">
-      <h2 class="preview__title">Preview</h2>
+    <!-- section class="preview">
+      <span class="preview__title">Preview</span>
       <Chart :chart-data="chartData" :scale="scale" />
-    </section>
+    </section -->
   </article>
 </template>
 
 <script>
 import Stepper from '@/components/Stepper/index.vue';
-import Chart from '@/components/Chart.vue';
+// import Chart from '@/components/Chart.vue';
 
 export default {
   name: 'Assessment',
@@ -32,6 +30,11 @@ export default {
     },
 
     steps: {
+      type: Array,
+      required: true,
+    },
+
+    descriptions: {
       type: Array,
       required: true,
     },
@@ -48,7 +51,6 @@ export default {
   },
 
   components: {
-    Chart,
     Stepper,
   },
 
@@ -73,6 +75,8 @@ export default {
 
     &__title {
       margin-bottom: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
     }
   }
 </style>

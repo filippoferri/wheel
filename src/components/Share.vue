@@ -1,11 +1,8 @@
 <template>
   <section class="share">
-    <h2 class="share__title">WIP: Share The Result</h2>
-    <ul class="share__list">
-      <li class="share__item">Save as PNG</li>
-      <li class="share__item">Copy URL</li>
-      <li class="share__item">Share to Twitter</li>
-    </ul>
+    <p>Vuoi monitorare la Business Wheel nel tempo? Contattaci per avere il tuo
+      scenario sempre sotto controllo e per avviare strategie
+      di miglioramento delle aree più critiche.</p>
   </section>
 </template>
 
@@ -17,8 +14,6 @@ export default {
 
 <style lang="scss">
   .share {
-    /* temporarily disabled */
-    color: darkgray;
     user-select: none;
 
     &__list {

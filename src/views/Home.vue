@@ -1,13 +1,11 @@
 <template>
   <div class="home">
-    <h1>The Wheel of Life</h1>
-    <p>
-      The Wheel of Life is a simple yet powerful tool for visualizing all areas of your life
-      at once to see where you most need improvement. It only takes a minute to complete
-      and it's totally free!
-    </p>
+    <h1>Business Wheel</h1>
 
-    <router-link :to="{ name: 'assessment' }">Fill out your wheel!</router-link>
+    <p>La Business Wheel è uno strumento semplice
+      ma efficace per rilevare lo scenario della tua azienda.</p>
+
+    <router-link :to="{ name: 'assessment' }">Crea lo scenario adesso!</router-link>
   </div>
 </template>
 

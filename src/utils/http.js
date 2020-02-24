@@ -15,8 +15,9 @@ export function fetchWheelData() {
 
   const { cancel } = xhr;
 
-  const req = xhr.then(({ data: { wheel: steps = [], scale = {} } = {} }) => {
-    wheelData = { steps, scale };
+  // eslint-disable-next-line max-len
+  const req = xhr.then(({ data: { wheel: steps = [], descriptions: descriptions = [], scale = {} } = {} }) => {
+    wheelData = { steps, descriptions, scale };
     return wheelData;
   });
 
