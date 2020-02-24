@@ -1,0 +1,27 @@
+{
+  "wheel": [
+    "fedeltà al brand",
+    "notorietà del brand",
+    "soddisfazione del cliente",
+    "valore del cliente nel tempo ",
+    "abbandono del cliente",
+    "frequenza d'acquisto",
+    "fidelizzazione del cliente",
+    "interessamento del cliente"
+  ],
+  "descriptions": [
+    "Brand Loyalty, la preferenza abituale accordata dai clienti al tuo marchio.",
+    "Brand Awarness, il numero di persone che riconoscono il tuo marchio.",
+    "Customer Satisfaction, la soddisfazione dei bisogni e delle esigenze dei clienti.",
+    "Customer Lifetime Value, il valore che un cliente può portare in un determinato lasso di tempo.",
+    "Churn Rate, la percentuale di clienti che ha abbandonato i tuoi servizi rispetto al numero totale di clienti.",
+    "Purchase Frequency, la frequenza con cui i clienti effettuano acquisti nell'arco di un anno.",
+    "Customer Retention Rate, il mantenimento di continue relazioni con i tuoi clienti nel lungo termine.",
+    "Engagement Rate, il coinvolgimento e l'attaccamento emotivo del cliente nei confronti del tuo brand."
+  ],
+  "scale": {
+    "min": 0,
+    "max": 10,
+    "stepSize": 1
+  }
+}
